@@ -10,7 +10,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('article-one', function (req, res) {
-  res.send('the article one is served'));
+  res.send('the article one is served');
 });
 
 app.get('/ui/style.css', function (req, res) {
