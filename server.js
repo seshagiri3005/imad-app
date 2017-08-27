@@ -59,8 +59,7 @@ var articles ={
     },
     
     
-}
- 
+};
 function createtemp(obj){
     var title= obj.title;
     var  head= obj.head;
