@@ -10,7 +10,7 @@ app.get('/', function (req, res) {
 });
 
 var articles ={
-    artone:{
+    'art-one':{
         title: "sesha's article one",
         head:"Art one",
         para:`<p>
@@ -26,7 +26,7 @@ var articles ={
                 </p>`
     },
     
-    arttwo:{
+    'arttwo':{
         title: "sesha's article two",
         head:"Art two",
         para:`<p>
@@ -42,7 +42,7 @@ var articles ={
                 </p>`
     },
     
-    atthree:{
+    'atthree':{
         title: "sesha's article three",
         head:"Art three",
         para:`<p>
@@ -57,25 +57,8 @@ var articles ={
                     Mechanical engineering is the discipline that applies engineering, physics, and materials science principles to design, analyze, manufacture, and maintain mechanical systems. It is the branch of engineering that involves the design, production, and operation of machinery
                 </p>`
     },
-    
-    
 };
 
-var art1= {
-        title: "sesha's article one",
-        head:"Art one",
-        para:`<p>
-                    Image result for computer science engineering
-                    Computer Science engineering deals with design, implementation, and management of information system of both software & hardware processes. A computer scientist specializes in theory of computation and design of computational systems.
-                  </p>
-                
-                <p>
-                    Information technology (IT) is the application of computers to store, study, retrieve, transmit, and manipulate data, or information, often in the context of a business or other enterprise. IT is considered a subset of information and communications technology (ICT).
-                </p>
-                <p>
-                    Mechanical engineering is the discipline that applies engineering, physics, and materials science principles to design, analyze, manufacture, and maintain mechanical systems. It is the branch of engineering that involves the design, production, and operation of machinery
-                </p>`
-    };
 function createtemp(obj){
     var title= obj.title;
     var  head= obj.head;
@@ -111,12 +94,9 @@ function createtemp(obj){
 return htmlt;
 }
  
- 
- 
- 
-
-app.get('/article-one', function (req, res) {
-  res.send(createtemp( articles[artone]));
+app.get('/:articlesName', function (req, res) {
+        var artName=req.params.artName;
+  res.send(createtemp( articles[artName     ]));
 });
 
 app.get('/article-two', function (req, res) {
