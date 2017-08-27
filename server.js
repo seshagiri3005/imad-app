@@ -10,7 +10,7 @@ app.get('/', function (req, res) {
 });
 
 var articles ={
-    art1:{
+    artone:{
         title: "sesha's article one",
         head:"Art one",
         para:`<p>
@@ -26,7 +26,7 @@ var articles ={
                 </p>`
     },
     
-    art2:{
+    arttwo:{
         title: "sesha's article two",
         head:"Art two",
         para:`<p>
@@ -42,7 +42,7 @@ var articles ={
                 </p>`
     },
     
-    art3:{
+    atthree:{
         title: "sesha's article three",
         head:"Art three",
         para:`<p>
@@ -116,7 +116,7 @@ return htmlt;
  
 
 app.get('/article-one', function (req, res) {
-  res.send(createtemp( art1));
+  res.send(createtemp( articles[artone]));
 });
 
 app.get('/article-two', function (req, res) {
