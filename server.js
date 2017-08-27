@@ -75,7 +75,7 @@ var art1= {
                 <p>
                     Mechanical engineering is the discipline that applies engineering, physics, and materials science principles to design, analyze, manufacture, and maintain mechanical systems. It is the branch of engineering that involves the design, production, and operation of machinery
                 </p>`
-    }
+    };
 function createtemp(obj){
     var title= obj.title;
     var  head= obj.head;
